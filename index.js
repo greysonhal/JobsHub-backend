@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const port = process.env.PORT || jobs-hub-backend.vercel.app;
+const port = process.env.PORT || 5000;
 const multer = require('multer');
 
 // Set up Multer storage
@@ -21,7 +21,11 @@ require('dotenv').config();
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["http://localhost:5173","https://jobs-hub-backend.vercel.app/"]
+  }
+));
 app.use("/files", express.static("files"))
 
 //user: greyson233 password:VURZDlXCLKRigsSm
