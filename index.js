@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || jobs-hub-backend.vercel.app;
 const multer = require('multer');
 
 // Set up Multer storage
